@@ -322,17 +322,29 @@ p {
 
 .floating-card {
     position: absolute;
-    bottom: 2rem;
+    bottom: -1rem;
     right: -1rem;
     background: #006A67;
     padding: 1.25rem 1rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 30px rgba(0, 106, 103, 0.15);
+    border-radius: 1rem;
+    box-shadow: 0 15px 40px rgba(0, 106, 103, 0.25);
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    min-width: 170px;
-    border: 2px solid #006A67;
+    min-width: 180px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .card-icon {
@@ -1535,21 +1547,9 @@ p {
     .hero {
         padding: 3rem 0 4rem;
         margin-top: 4rem; /* Account for fixed header */
-        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        background: var(--color-bg);
         position: relative;
         overflow: hidden;
-    }
-    
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at 30% 20%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
-                    radial-gradient(circle at 70% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
-        pointer-events: none;
     }
     
     .hero-container {
@@ -1591,13 +1591,18 @@ p {
     }
     
     .floating-card {
+        position: absolute;
+        bottom: -1rem;
+        right: 1rem;
         max-width: 180px;
         padding: 1rem;
         background: #006A67;
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(0, 106, 103, 0.3);
-        box-shadow: 0 8px 32px rgba(0, 106, 103, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 12px 35px rgba(0, 106, 103, 0.3);
         border-radius: 16px;
+        z-index: 10;
+        animation: float 3s ease-in-out infinite;
     }
     
     .hero-actions {
@@ -1779,14 +1784,17 @@ p {
     }
     
     .floating-card {
-        position: static;
-        margin: 1.5rem auto 0;
+        position: absolute;
+        bottom: -1rem;
+        right: -0.5rem;
         max-width: 180px;
         padding: 0.75rem;
-        transform: none;
         background: #006A67;
-        border: 1px solid rgba(0, 106, 103, 0.3);
-        box-shadow: 0 6px 20px rgba(0, 106, 103, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 12px 35px rgba(0, 106, 103, 0.3);
+        border-radius: 1rem;
+        z-index: 10;
+        animation: float 3s ease-in-out infinite;
     }
     
     .hero-stats {
@@ -2058,21 +2066,9 @@ p {
         padding: 2.5rem 0 3rem;
         min-height: auto;
         margin-top: 4rem; /* Account for fixed header */
-        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        background: var(--color-bg);
         position: relative;
         overflow: hidden;
-    }
-    
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at 20% 10%, rgba(34, 197, 94, 0.08) 0%, transparent 40%),
-                    radial-gradient(circle at 80% 90%, rgba(59, 130, 246, 0.08) 0%, transparent 40%);
-        pointer-events: none;
     }
     
     .hero-container {
@@ -2144,14 +2140,18 @@ p {
     }
     
     .floating-card {
+        position: absolute;
+        bottom: -0.75rem;
+        right: 0.5rem;
         max-width: 170px;
         padding: 0.8rem;
-        margin: 1rem auto 0;
         background: #006A67;
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(0, 106, 103, 0.3);
-        box-shadow: 0 6px 24px rgba(0, 106, 103, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 106, 103, 0.3);
         border-radius: 12px;
+        z-index: 10;
+        animation: float 3s ease-in-out infinite;
     }
     
     .card-number {
@@ -2245,21 +2245,9 @@ p {
     .hero {
         padding: 2rem 0 2.5rem;
         margin-top: 4rem; /* Account for fixed header */
-        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        background: var(--color-bg);
         position: relative;
         overflow: hidden;
-    }
-    
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at 15% 5%, rgba(34, 197, 94, 0.06) 0%, transparent 35%),
-                    radial-gradient(circle at 85% 95%, rgba(59, 130, 246, 0.06) 0%, transparent 35%);
-        pointer-events: none;
     }
     
     .hero-container {
@@ -2328,14 +2316,18 @@ p {
     }
     
     .floating-card {
+        position: absolute;
+        bottom: -0.5rem;
+        right: 0.25rem;
         max-width: 150px;
         padding: 0.7rem;
-        margin: 0.75rem auto 0;
         background: #006A67;
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(0, 106, 103, 0.3);
-        box-shadow: 0 4px 16px rgba(0, 106, 103, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 25px rgba(0, 106, 103, 0.3);
         border-radius: 10px;
+        z-index: 10;
+        animation: float 3s ease-in-out infinite;
     }
     
     .card-number {
@@ -2470,13 +2462,13 @@ p {
                         Get personalized fitness coaching that delivers real results. Join hundreds of clients who've achieved their dream physique with our proven methodology.
                     </p>
                     <div class="hero-actions">
-                        <button class="btn btn-primary btn-large">
+                        <button class="btn btn-primary btn-large" onclick="scrollToSection('services')">
                             Start Your Journey
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="m9 18 6-6-6-6"/>
                             </svg>
                         </button>
-                        <button class="btn btn-secondary btn-large">
+                        <button class="btn btn-secondary btn-large" onclick="scrollToSection('testimonials')">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polygon points="5,3 19,12 5,21"/>
                             </svg>
@@ -4253,6 +4245,17 @@ document.addEventListener('click', function(e) {
     </div>
 
     <script>
+        // Smooth scroll to section function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
         // Wait for DOM to be ready
         document.addEventListener('DOMContentLoaded', function() {
             // Add pulse animation styles
